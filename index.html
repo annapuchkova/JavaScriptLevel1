@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="dist/main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="task">
+                <h1>Game Guess the Number </h1>
+                <span>Браузер будет загадывать случайное четырехзначное число, а мы будем отгадывать.
+                    Попытки отгадать число будут идти через диалоговое окно — prompt. 
+                    Браузер будет сообщать в ответ, больше или меньше загаданного наш ответ.</span>
+                <input value="Lets Start" onclick="game()" type="button" class="buttons">
+                <span id="game"></span>
+            </div>
+        <div class="task">
+            <h1>Task 1: </h1>
+            <span>Почему код дает именно такие результаты?</span>
+            <code>
+                var a = 1, b = 1, c, d;<Br>
+                c = ++a; alert(c); // 2<Br>
+                d = b++; alert(d); // 1<Br>
+                c = (2+ ++a); alert(c); // 5<Br>
+                d = (2+ b++); alert(d); // 4<Br>
+                alert(a); // 3<Br>
+                alert(b); // 3</code>
+            <input value="Click to show answer" onclick="getAnswerTask1()" type="button" class="buttons">
+            <span id="task1"></span>
+        </div>
+        <div class="task">
+            <h1>Task 2: </h1>
+            <span>Чему будет равен x? </span>
+            <code>
+                var a = 2;<Br>
+                var x = 1 + (a *= 2);</code>
+            <input value="Click to show answer" onclick="getAnswerTask2()" type="button" class="buttons">
+            <span id="task2"></span>
+        </div>
+        <div class="task">
+            <h1>Task 3: </h1>
+            <span>Объявить две целочисленные переменные — a и b и задать им произвольные начальные значения. Затем написать скрипт, который работает по следующему принципу:</span>
+            <code>
+                если a и b положительные, вывести их разность;<Br>
+                если а и b отрицательные, вывести их произведение;<Br>
+                если а и b разных знаков, вывести их сумму;<Br>
+            </code>
+            <span>Ноль можно считать положительным числом.</span>
+            <input value="Click to show answer" onclick="getOperation()" type="button" class="buttons">
+            <span id="task3"></span>
+        </div>
+        <div class="task">
+            <h1>Task 4: </h1>
+            <span>Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch организовать вывод чисел от a до 15.</span>
+            <input value="Click to show solution with SWITCH" onclick="shownListOfNumbers()" type="button" class="buttons">
+            <span id="task4"></span>
+            <input value="Click to show solution with FOR" onclick="shownListOfNumbersCycle()" type="button" class="buttons">
+            <span id="task4_2"></span>
+        </div>
+        <div class="task">
+            <h1>Task 5: </h1>
+            <span>Реализовать четыре основные арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.</span>
+            <input value="Click to show answer" onclick="showOperations()" type="button" class="buttons">
+            <span id="task5"></span>
+        </div>
+        <div class="task">
+            <h1>Task 6: </h1>
+            <span>Реализовать функцию с тремя параметрами: 
+                <b>function mathOperation(arg1, arg2, operation)</b>, 
+                где <b>arg1, arg2</b> — значения аргументов, <b>operation</b> — строка с названием 
+                операции. В зависимости от переданного значения выполнить одну из 
+                арифметических операций (использовать функции из пункта 5) и вернуть 
+                полученное значение (применить switch).</span>
+            <input value="Click to show answer" onclick="getMathOperation()" type="button" class="buttons">
+            <span id="task6"></span>
+        </div>
+        <div class="task">
+            <h1>Task 7: </h1>
+            <span>* Сравнить null и 0. Объяснить результат.</span>
+            <input value="Click to show answer" onclick="getCompare()" type="button" class="buttons">
+            <span id="task7"></span>
+        </div>
+        <div class="task">
+            <h1>Task 8: </h1>
+            <span>* С помощью рекурсии организовать функцию возведения числа в степень. 
+                Формат: <b>function power(val, pow)</b>, где <b>val</b> — заданное число, 
+                <b>pow</b> –— степень.</span>
+            <input value="Click to show answer" onclick="getPower()" type="button" class="buttons">
+            <span id="task8"></span>
+        </div>
+</div>
+</body>
+</html>
