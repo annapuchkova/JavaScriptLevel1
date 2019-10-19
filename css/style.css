@@ -6,6 +6,7 @@
     justify-content: flex-start;
     align-items: center;
     align-content: flex-start;
+    padding: 20px;
 }
 
 .task {
@@ -21,7 +22,7 @@
 }
 
 .buttons {
-    width: 200px;
+    width: 250px;
     height: 30px;
     background-color: darkred;
     border-color: brown;
@@ -39,6 +40,13 @@ span {
     font-size: 14px;
     color: darkslategrey;
     align-self: flex-start;
+}
+code {
+    align-self: flex-start;
+    background-color: lightgrey;
+    border: 1px solid gray;
+    margin: 10px 0 0 0;
+    padding: 5px;
 }
 #result,
 #count,
