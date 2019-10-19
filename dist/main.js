@@ -81,6 +81,8 @@ var getOperation = function getOperation() {
 // task 4 solution
 // Присвоить переменной а значение в промежутке [0..15]. 
 // С помощью оператора switch организовать вывод чисел от a до 15.
+// Первое решение с помощью switch.
+// Второе решение с циклом.
 
 var shownListOfNumbers = function shownListOfNumbers() {
     var a = +prompt('Enter number [0 ... 15], please');
