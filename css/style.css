@@ -10,7 +10,7 @@
 }
 
 .task {
-    width: 800px;
+    width: 80%;
     min-height: 100px;
     display: flex;
     flex-direction: column;
@@ -19,6 +19,7 @@
     align-content: flex-start;
     padding: 10px;
     box-sizing: border-box;
+    border-bottom: 1px solid gray;
 }
 
 .buttons {
@@ -29,7 +30,16 @@
     color: #fff;
     margin: 10px 0;
 }
-.buttons:hover {
+.buttonsCard {
+    width: 150px;
+    height: 30px;
+    background-color: rgb(6, 6, 138);
+    border-color: rgb(42, 44, 165);
+    color: #fff;
+    margin: 10px 0;
+}
+.buttons:hover, 
+.buttonsCard:hover {
     background-color: rgb(85, 3, 3);
     cursor: pointer;
 }
