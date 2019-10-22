@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="dist/lesson3.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="task">
+                <h1>Game Guess the Number </h1>
+                <span>Браузер будет загадывать случайное четырехзначное число, а мы будем отгадывать.
+                    Попытки отгадать число будут идти через диалоговое окно — prompt. 
+                    Браузер будет сообщать в ответ, больше или меньше загаданного наш ответ.</span>
+                <input value="Lets Start" onclick="game()" type="button" class="buttons">
+                <span id="game"></span>
+            </div>
+        <div class="task">
+            <h1>Task 1: </h1>
+            <span>С помощью цикла while вывести все простые числа в промежутке от 0 до 100.</span>
+            <input value="Click to show result" onclick="getAnswerTask1()" type="button" class="buttons">
+            <span id="task1"></span>
+        </div>
+        <div class="task">
+            <h1>Task 2: </h1>
+            <span>Организовать такой массив для хранения товаров в корзине</span>
+
+            <input value="Click to show Card" onclick="getAnswerTask2()" type="button" class="buttons">
+            <span id="task2"></span>
+            <input value="Click to add Item1" onclick="addItem('1')" type="button" class="buttonsCard">
+            <input value="Click to add Item2" onclick="addItem('2')" type="button" class="buttonsCard">
+        </div>
+        <div class="task">
+            <h1>Task 3: </h1>
+            <span>Организовать функцию countBasketPrice, которая будет считать стоимость корзины</span>
+
+            <input value="Click to show Total Price" onclick="getAnswerTask3()" type="button" class="buttons">
+            <span id="task3"></span>
+        </div>
+        <div class="task">
+            <h1>Task 4: </h1>
+            <span>* Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. Выглядеть это должно так:</span>
+            <code>
+                for(...){// здесь пусто}
+            </code>
+            <input value="Click to show solution" onclick="getAnswerTask4()" type="button" class="buttons">
+            <span id="task4"></span>
+        </div>
+        <div class="task">
+            <h1>Task 5: </h1>
+            <span>* Нарисовать пирамиду с 20 рядами с помощью console.log, как показано на рисунке:</span>
+            <code>
+                x
+                xx
+                xxx
+                xxxx
+                xxxxx
+            </code>
+            <input value="Click to show solution" onclick="getAnswerTask5()" type="button" class="buttons">
+            <span id="task5"></span>
+        </div>
+        
+</div>
+</body>
+</html>
