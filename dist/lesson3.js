@@ -11,15 +11,15 @@ var getRundomNumber = function getRundomNumber(min, max) {
 };
 var game = function game() {
 
-  var max = 99;
-  var min = 10;
-  var rundomNumber = getRundomNumber(min, max);
-  var arr = String(rundomNumber).split('');
-  var result = [].concat(_toConsumableArray(new Set(arr))).join('');
+  var max = 99; // задаем максимальное случайное число
+  var min = 10; // задаем минимальное случайное число
+  var rundomNumber = getRundomNumber(min, max); // получаем случайное число
+  var arr = String(rundomNumber).split(''); // преобразуем случайное число в массив цифр
+  var result = [].concat(_toConsumableArray(new Set(arr))).join(''); // преобразуем случайное число в массив с уникальными значениями
 
   var iter = function iter(userAnswer, correctAnswer) {
     if (userAnswer === correctAnswer) {
-      alert('You are winnner!');
+      alert('You are winnner!'); // если ответ равен загаданному числу
       return;
     } else if (+userAnswer < +correctAnswer) {
       var newUserAnswer = prompt('Your answer is less than correct. ' + compareArrs(userAnswer, correctAnswer) + ' \nTry again: ');
@@ -30,10 +30,10 @@ var game = function game() {
     }
   };
   if (result.length != arr.length) {
-    game();
+    game(); // если разрядность загаданного числа НЕ равна случайному числу, запускаем игру сначала
   } else {
-    var answer = prompt('Try to guess the number');
-    var checkUnigue = [].concat(_toConsumableArray(new Set(answer))).join('');
+    var answer = prompt('Try to guess the number'); // спрашиваем ответ у юзера
+    var checkUnigue = [].concat(_toConsumableArray(new Set(answer))).join(''); // проверяем, что юзер ввел только уникальные цифры и число нужной разрядности
     if (answer.length != checkUnigue.length || answer.length > String(max).length || answer.length < String(min).length) {
       alert('Please, enter unigue numbers [ ' + min + ' ... ' + max + ' ]!');
       game();
@@ -42,17 +42,19 @@ var game = function game() {
     }
   }
 };
-
+// проверям есть ли быки и коровы
 var compareArrs = function compareArrs(a, b) {
   var result = [];
-  var checkUnigue = [].concat(_toConsumableArray(new Set(a))).join('');
+  var checkUnigue = [].concat(_toConsumableArray(new Set(a))).join(''); // проверяем ответ на уникальные цифры
   if (a.length != checkUnigue.length) {
     return [].concat(_toConsumableArray(result), ['\nPlease, use only unique numbers!']);
   } else {
-    var key = a.split('');
+    var key = a.split(''); // преобразуем строку в массив цифр
     var obj = b.split('');
+
     for (var i = 0; i < obj.length; i++) {
       if (obj.indexOf(key[i]) != -1) {
+        // проверяем есть ли цифры ответа в задуманном числе, если есть, то проверяем на какой позиции
         result = key[i] == obj[i] ? [].concat(_toConsumableArray(result), ['\nYou have BULL: ' + key[i]]) : [].concat(_toConsumableArray(result), ['\nYou have COW: ' + key[i]]);
       }
     }
@@ -91,8 +93,6 @@ var isPrime = function isPrime(num) {
 // Task 2
 // Организовать массив для хранения товаров в корзине
 var card = [];
-var item1 = { itemID: '1', name: 'book', price: 100, quantity: 1 };
-var item2 = { itemID: '2', name: 'pen', price: 5, quantity: 1 };
 
 var items = {
   '1': { name: 'book', price: 100, quantity: 1 },
@@ -114,14 +114,9 @@ var addItem = function addItem(art) {
 var getAnswerTask2 = function getAnswerTask2() {
 
   var info = card.length === 0 ? 'empty' : '';
-  /*  for (let i = 0; i < card.length; i++) {
-      info = info + `<br>item ${i + 1}: ${card[i].name};
-      price: ${card[i].price};
-      quantity: ${card[i].quantity}`;
-    }*/
   var i = 1;
   for (var key in card) {
-    info = info + ('<br>item ' + i + ': ' + card[key].name + ';\n      price: ' + card[key].price + ';\n      quantity: ' + card[key].quantity);
+    info = info + ('<br>\n      item ' + i + ': ' + card[key].name + ';\n      price: ' + card[key].price + ';\n      quantity: ' + card[key].quantity);
     i++;
   }
   document.getElementById('task2').innerHTML = 'Your Card: ' + info;

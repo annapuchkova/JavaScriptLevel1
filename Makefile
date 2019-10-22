@@ -9,3 +9,6 @@ gitName:
 
 lint:
 	./node_modules/.bin/eslint src/main.js
+
+push:
+	git push --set-upstream origin
