@@ -25,17 +25,19 @@
 .buttons {
     width: 250px;
     height: 30px;
-    background-color: darkred;
+    background-color: rgb(168, 56, 56);
     border-color: brown;
     color: #fff;
+    border-radius: 5px;
     margin: 10px 0;
 }
 .buttonsCard {
     width: 150px;
     height: 30px;
-    background-color: rgb(6, 6, 138);
-    border-color: rgb(42, 44, 165);
+    background-color: rgb(49, 148, 179);
+    border-color: rgb(56, 133, 163);
     color: #fff;
+    border-radius: 5px;
     margin: 10px 0;
 }
 .buttons:hover, 

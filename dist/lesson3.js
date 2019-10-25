@@ -77,6 +77,7 @@ var getAnswerTask1 = function getAnswerTask1() {
 };
 
 var isPrime = function isPrime(num) {
+  // проверяем, что число простое
   if (num < 2) {
     return false;
   }
@@ -100,7 +101,6 @@ var items = {
 };
 
 var addItem = function addItem(art) {
-
   if (art in card) {
     card[art].quantity++;
     console.log('card name: ' + card[art].name + '; card quantity: ' + card[art].quantity);

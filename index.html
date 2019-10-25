@@ -5,33 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="dist/lesson3.js"></script>
+    <script defer src="dist/lesson4.js"></script>
     <title>Document</title>
 </head>
 <body>
     <div class="wrapper">
-        <div class="task">
+      <!--  <div class="task">
                 <h1>Game Guess the Number </h1>
                 <span>Браузер будет загадывать случайное четырехзначное число, а мы будем отгадывать.
                     Попытки отгадать число будут идти через диалоговое окно — prompt. 
                     Браузер будет сообщать в ответ, больше или меньше загаданного наш ответ.</span>
-                <input value="Lets Start" onclick="game()" type="button" class="buttons">
+                <input value="Start Cows and Bulls game" onclick="game()" type="button" class="buttons">
                 <span id="game"></span>
-            </div>
+            </div>-->
         <div class="task">
-            <h1>Task 1: </h1>
-            <span>С помощью цикла while вывести все простые числа в промежутке от 0 до 100.</span>
-            <input value="Click to show result" onclick="getAnswerTask1()" type="button" class="buttons">
+            <h1>Task 1: Quest </h1>
+            <span>Написать функцию, преобразующую число в объект. Передавая на вход число 
+                от 0 до 999, надо получить на выходе объект, в котором в соответствующих 
+                свойствах описаны единицы, десятки и сотни. Например, для числа 245 надо 
+                получить следующий объект: {‘единицы’: 5, ‘десятки’: 4, ‘сотни’: 2}. 
+                Если число превышает 999, необходимо выдать соответствующее сообщение с 
+                помощью console.log и вернуть пустой объект.</span>
+            <input value="Start Quest" onclick="quest()" type="button" class="buttons">
             <span id="task1"></span>
-        </div>
-        <div class="task">
+        </div> 
+       <div class="task">
             <h1>Task 2: </h1>
             <span>Организовать такой массив для хранения товаров в корзине</span>
 
             <input value="Click to show Card" onclick="getAnswerTask2()" type="button" class="buttons">
             <span id="task2"></span>
-            <input value="Click to add Item1" onclick="addItem('1')" type="button" class="buttonsCard">
-            <input value="Click to add Item2" onclick="addItem('2')" type="button" class="buttonsCard">
+            <input value="Click to add Book" onclick="addItem('1')" type="button" class="buttonsCard">
+            <input value="Click to add Pen" onclick="addItem('2')" type="button" class="buttonsCard">
+            <input value="Click to add Bag" onclick="addItem('3')" type="button" class="buttonsCard">
         </div>
         <div class="task">
             <h1>Task 3: </h1>
@@ -40,7 +46,7 @@
             <input value="Click to show Total Price" onclick="getAnswerTask3()" type="button" class="buttons">
             <span id="task3"></span>
         </div>
-        <div class="task">
+       <!--  <div class="task">
             <h1>Task 4: </h1>
             <span>* Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. Выглядеть это должно так:</span>
             <code>
@@ -49,7 +55,7 @@
             <input value="Click to show solution" onclick="getAnswerTask4()" type="button" class="buttons">
             <span id="task4"></span>
         </div>
-        <div class="task">
+       <div class="task">
             <h1>Task 5: </h1>
             <span>* Нарисовать пирамиду с 20 рядами с помощью console.log, как показано на рисунке:</span>
             <code>
@@ -61,7 +67,7 @@
             </code>
             <input value="Click to show solution" onclick="getAnswerTask5()" type="button" class="buttons">
             <span id="task5"></span>
-        </div>
+        </div>--> 
         
 </div>
 </body>
