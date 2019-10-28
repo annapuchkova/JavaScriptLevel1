@@ -1,0 +1,68 @@
+.wrapper {
+    width: 100%;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    padding: 20px;
+}
+
+.task {
+    width: 80%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid gray;
+}
+
+.buttons {
+    width: 250px;
+    height: 30px;
+    background-color: rgb(168, 56, 56);
+    border-color: brown;
+    color: #fff;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.buttonsCard {
+    width: 150px;
+    height: 30px;
+    background-color: rgb(49, 148, 179);
+    border-color: rgb(56, 133, 163);
+    color: #fff;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.buttons:hover, 
+.buttonsCard:hover {
+    background-color: rgb(85, 3, 3);
+    cursor: pointer;
+}
+h1 {
+   font-size: 14px; 
+}
+span {
+    font-size: 14px;
+    color: darkslategrey;
+    align-self: flex-start;
+}
+code {
+    align-self: flex-start;
+    background-color: lightgrey;
+    border: 1px solid gray;
+    margin: 10px 0 0 0;
+    padding: 5px;
+}
+#result,
+#count,
+#rule {
+    color: black;
+    margin: 10px 0 0 0;
+}
