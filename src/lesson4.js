@@ -166,17 +166,26 @@ const getAnswerTask2 = () => {
 // Task 3
 // Организовать функцию countBasketPrice, которая будет считать стоимость корзины
 
-const countBasketPrice = (arr) => {
+const countBasketItems = (arr) => {
     let count = 0;
     for( let key in arr ) {
-      count = count + arr[key].price * arr[key].quantity;
+      count = count + arr[key].quantity;
     }
     return count;  
   };
   
-  // Показать стоимость корзины
+const countBasketPrice = (arr) => {
+  let count = 0;
+  for( let key in arr ) {
+    count = count + arr[key].price * arr[key].quantity;
+  }
+  return count;  
+};
+
+
+  // Показать стоимость корзины  и количество товаров
   const getAnswerTask3 = () => {
-    document.getElementById('task3').innerHTML = `Total price: ${countBasketPrice(card)}`;
+    document.getElementById('task3').innerHTML = `${countBasketItems(card)} items in the Card. Total price: ${countBasketPrice(card)}`;
   };
 
 // Task 6.

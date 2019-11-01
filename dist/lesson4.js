@@ -165,6 +165,14 @@ var getAnswerTask2 = function getAnswerTask2() {
 // Task 3
 // Организовать функцию countBasketPrice, которая будет считать стоимость корзины
 
+var countBasketItems = function countBasketItems(arr) {
+  var count = 0;
+  for (var key in arr) {
+    count = count + arr[key].quantity;
+  }
+  return count;
+};
+
 var countBasketPrice = function countBasketPrice(arr) {
   var count = 0;
   for (var key in arr) {
@@ -173,9 +181,9 @@ var countBasketPrice = function countBasketPrice(arr) {
   return count;
 };
 
-// Показать стоимость корзины
+// Показать стоимость корзины  и количество товаров
 var getAnswerTask3 = function getAnswerTask3() {
-  document.getElementById('task3').innerHTML = 'Total price: ' + countBasketPrice(card);
+  document.getElementById('task3').innerHTML = countBasketItems(card) + ' items in the Card. Total price: ' + countBasketPrice(card);
 };
 
 // Task 6.
