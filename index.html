@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="dist/text.js" defer></script>
+    <script src="dist/lesson5.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+
+       <div class="task">
+            <h1>Интернет-магазин</h1>
+            <span>Сделать генерацию корзины динамической: верстка корзины не должна находиться в HTML-структуре. 
+                Там должен быть только div, в который будет вставляться корзина, сгенерированная на базе JS</span>
+
+            <input value="Click to show Card" onclick="getCard()" type="button" class="buttons">
+            <span id="card"></span>
+            <input value="Click to add Book" onclick="addItem('1')" type="button" class="buttonsCard">
+            <input value="Click to add Pen" onclick="addItem('2')" type="button" class="buttonsCard">
+            <input value="Click to add Bag" onclick="addItem('3')" type="button" class="buttonsCard">
+        </div>
+        <div class="task">
+            <h1>Basket</h1>
+            <span>Организовать функцию countBasketPrice, которая будет считать стоимость корзины</span>
+
+            <input value="Click to show Total Price" onclick="getAnswerTask3()" type="button" class="buttons">
+            <span id="task3"></span>
+            <h1>Catalog</h1>
+            <span>* Сделать так, чтобы товары в каталоге выводились при помощи JS:</span>
+            <input value="Click to show Catalog" onclick="getCatalog()" type="button" class="buttons">
+            <span id="catalog"></span>
+        </div>
+
+        
+</div>
+</body>
+</html>
