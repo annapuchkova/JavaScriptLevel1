@@ -27,6 +27,21 @@ const figuresWhite = [
     '',
     {name: 'whitePawn', img: '&#9817;'}, 
     ];
+let selected, newDiv;
+const picked = () => {
+    selected = this.pick;
+    selectedID = this.id;
+    this.className = 'selectedFigure';
+};
+
+const cliked = () => {
+
+    newDiv = document.createElement('div');
+    newDiv.className = "emptySelected";
+    newDiv.innerHTML = selected;
+    this.append(newDiv);
+
+};
 
 const getChess = () => {
   
@@ -37,6 +52,7 @@ const getChess = () => {
    table.className = "table_board";
     for (let i = 9; i >= 0; i--) {
         let tr = document.createElement('tr');
+
         for (let j = 0; j < 10; j++) {
             let td = document.createElement('td');
             td.id = abc[j] + '' + i;
@@ -102,12 +118,18 @@ const getChess = () => {
                     case 8:
                             div = document.createElement('div');
                             div.className = "figure";
-                            div.innerHTML = figuresBlack[j].img;
+                            div.pick = figuresBlack[j].img;
+                            div.innerHTML = div.pick;
                             div.id = figuresBlack[j].name;
+                            div.onclick = picked;
                             td.append(div);
                         break;
                     default:
-                        td.innerHTML = '';
+                        div = document.createElement('div');
+                        div.className = "empty";
+                        div.innerHTML = '';
+                        div.onclick = cliked;
+                        td.append(div);
                 }
             }
 

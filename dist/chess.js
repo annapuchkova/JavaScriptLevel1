@@ -5,6 +5,21 @@ var numbers = ['', '1', '2', '3', '4', '5', '6', '7', '8', ''];
 
 var figuresBlack = ['', { name: 'blackRook1', img: '&#9820;' }, { name: 'blackKnight1', img: '&#9822;' }, { name: 'blackBishop2', img: '&#9821;' }, { name: 'blackQueen', img: '&#9819;' }, { name: 'blackKing', img: '&#9818;' }, { name: 'lackBishop2', img: '&#9821;' }, { name: 'blackKnight2', img: '&#9822;' }, { name: 'blackRook2', img: '&#9820;' }, '', { name: 'blackPawn', img: '&#9823;' }];
 var figuresWhite = ['', { name: 'whiteRook1', img: '&#9814;' }, { name: 'whiteKnight1', img: '&#9816;' }, { name: 'whiteBishop2', img: '&#9815;' }, { name: 'whiteQueen', img: '&#9813;' }, { name: 'whiteKing', img: '&#9812;' }, { name: 'whiteBishop2', img: '&#9815;' }, { name: 'whiteKnight2', img: '&#9816;' }, { name: 'whiteRook2', img: '&#9814;' }, '', { name: 'whitePawn', img: '&#9817;' }];
+var selected = void 0,
+    newDiv = void 0;
+var picked = function picked() {
+    selected = undefined.pick;
+    selectedID = undefined.id;
+    undefined.className = 'selectedFigure';
+};
+
+var cliked = function cliked() {
+
+    newDiv = document.createElement('div');
+    newDiv.className = "emptySelected";
+    newDiv.innerHTML = selected;
+    undefined.append(newDiv);
+};
 
 var getChess = function getChess() {
 
@@ -15,6 +30,7 @@ var getChess = function getChess() {
     table.className = "table_board";
     for (var i = 9; i >= 0; i--) {
         var tr = document.createElement('tr');
+
         for (var j = 0; j < 10; j++) {
             var td = document.createElement('td');
             td.id = abc[j] + '' + i;
@@ -79,12 +95,18 @@ var getChess = function getChess() {
                     case 8:
                         div = document.createElement('div');
                         div.className = "figure";
-                        div.innerHTML = figuresBlack[j].img;
+                        div.pick = figuresBlack[j].img;
+                        div.innerHTML = div.pick;
                         div.id = figuresBlack[j].name;
+                        div.onclick = picked;
                         td.append(div);
                         break;
                     default:
-                        td.innerHTML = '';
+                        div = document.createElement('div');
+                        div.className = "empty";
+                        div.innerHTML = '';
+                        div.onclick = cliked;
+                        td.append(div);
                 }
             }
 

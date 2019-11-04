@@ -1,13 +1,194 @@
 .wrapper {
     width: 100%;
-    min-height: 800px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 0px;
+}
+
+
+/** CARD **/
+
+.task {
+    width: 100%;
+    height: 650px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.buttons {
+    width: 250px;
+    height: 30px;
+    background-color: rgb(168, 56, 56);
+    border-color: brown;
+    color: #fff;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+.buttonsCard {
+    width: 150px;
+    height: 30px;
+    background-color: rgb(49, 148, 179);
+    border-color: rgb(56, 133, 163);
+    color: #fff;
+    border-radius: 5px;
+    margin: 10px 5px;
+}
+.buttons:hover, 
+.buttonsCard:hover {
+    background-color: rgb(85, 3, 3);
+    cursor: pointer;
+}
+h1 {
+   font-size: 14px; 
+}
+span {
+    font-size: 16px;
+    color: darkslategrey;
+    align-self: flex-start;
+    margin: 10px 0;
+    display: block;
+}
+.no_picture {
+    height: 200px;
+    font-size: 30px;
+    color: darkslategrey;
+    display: block;
+    align-self: center;
+    vertical-align: middle;
+}
+code {
+    align-self: flex-start;
+    background-color: lightgrey;
+    border: 1px solid gray;
+    margin: 10px 0 0 0;
+    padding: 5px;
+}
+#result,
+#count,
+#rule {
+    color: black;
+    margin: 10px 0 0 0;
+}
+
+#total {
+font-weight: bold;
+}
+#card {
+    width: 80%;
+    min-height: 200px; 
+}
+
+
+
+.galeryBlock2 {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between; 
+}
+.galeryBlock1 {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between; 
+}
+
+
+.big_picture {
+    height: 300px;
+    width: 220px;
+    border: 1px solid gray;
+    vertical-align: middle;
+    text-align: center;
+    box-sizing: border-box;
+}
+.small_picture {
+    width: 150px;
+    height: 200px;
+    margin: 10px 5px;
+    border: 1px gray solid;
+}
+#user {
+    width: 30%;
+    min-height: 650px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     align-content: flex-start;
-    padding: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+
 }
+#items {
+    width: 35%;
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+#catalogView {
+    width: 30%;
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#nav {
+    visibility: hidden;
+    width: 220px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+#back,
+#forward {
+    width: 70px;
+    height: 30px;
+    border-color: rgb(11, 66, 16);
+    border-radius: 5px;
+    color: #fff;
+    background-color: rgb(40, 116, 40);
+}
+#back:hover,
+#forward:hover {
+    cursor: pointer;
+    background-color: rgb(39, 139, 39);
+}
+#back:focus,
+#forward:focus {
+outline: none;
+}
+
+
+
 
 /* chess */
 .board {
@@ -27,13 +208,17 @@
     border: 1px solid rgb(224, 188, 167);
     width: 60px;
     height: 60px;
+    box-sizing: border-box;
     text-align: center;
+    cursor: pointer;
 }
 .black {
     background-color: rgb(143, 62, 31);
     width: 60px;
     height: 60px;
     text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
 }
 .aside {
     width: 60px;
@@ -41,7 +226,9 @@
     text-align: center;
 }
 .figure,
-.clicked {
+.selectedFigure,
+.empty,
+.emptySelected {
     font-size: 50px;
     width: 100%;
     height: 100%;
@@ -50,11 +237,13 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-}
-/*.figure:hover {
-    background-color: lightskyblue;
     cursor: pointer;
-}*/
+}
+.selectedFigure,
+.emptySelected {
+    background-color: lightskyblue;
+
+}
 .rotate {
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
@@ -76,67 +265,4 @@
 }
 .clicked {
     background-color: green;
-}
-
-
-
-
-/***/
-
-.task {
-    width: 80%;
-    min-height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: flex-start;
-    padding: 10px;
-    box-sizing: border-box;
-    border-bottom: 1px solid gray;
-}
-
-.buttons {
-    width: 250px;
-    height: 30px;
-    background-color: rgb(168, 56, 56);
-    border-color: brown;
-    color: #fff;
-    border-radius: 5px;
-    margin: 10px 0;
-}
-.buttonsCard {
-    width: 150px;
-    height: 30px;
-    background-color: rgb(49, 148, 179);
-    border-color: rgb(56, 133, 163);
-    color: #fff;
-    border-radius: 5px;
-    margin: 10px 0;
-}
-.buttons:hover, 
-.buttonsCard:hover {
-    background-color: rgb(85, 3, 3);
-    cursor: pointer;
-}
-h1 {
-   font-size: 14px; 
-}
-span {
-    font-size: 14px;
-    color: darkslategrey;
-    align-self: flex-start;
-}
-code {
-    align-self: flex-start;
-    background-color: lightgrey;
-    border: 1px solid gray;
-    margin: 10px 0 0 0;
-    padding: 5px;
-}
-#result,
-#count,
-#rule {
-    color: black;
-    margin: 10px 0 0 0;
 }
